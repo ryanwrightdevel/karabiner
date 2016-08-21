@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<root>
+
+    <devicevendordef>
+        <vendorname>Microsoft</vendorname>
+        <vendorid>0x045e</vendorid>
+    </devicevendordef>
+
+    <deviceproductdef>
+        <productname>Sculpt</productname>
+        <productid>0x07a5</productid>
+    </deviceproductdef>
+
+    <item>
+        <name>Remap Sculpt To Traditional Mac Keys</name>
+        <appendix>Remaps Ctrl Left=Control,Win Left=Option, Alt Left=Command and Alt Right=Command, Application=Option, Ctrl Right=Control</appendix>
+
+        <identifier>sculpt.remap_to_mac_traditional</identifier>
+
+        <device_only>DeviceVendor::Microsoft,
+            DeviceProduct::Sculpt</device_only>
+
+        <!-- left side of keyboard -->
+        <autogen>
+            <!-- change physical ALT(LEFT) to Command(Left) -->
+            --KeyToKey--
+            KeyCode::OPTION_L,
+            KeyCode::COMMAND_L
+        </autogen>
+        <autogen>
+            <!-- change phsyical Windows Key to Option(LEFt) -->
+            --KeyToKey--
+            KeyCode::COMMAND_L,
+            KeyCode::OPTION_L
+        </autogen>
+        <!-- right side of keyboard -->
+
+        <autogen>
+            <!-- change phsyical ALT(RIGHT) to Command Right(LEFt) -->
+            --KeyToKey--
+            KeyCode::OPTION_R,
+            KeyCode::COMMAND_R
+        </autogen>
+        <autogen>
+            <!-- change phsyical ALT(RIGHT) to Command Right(LEFt) -->
+            --KeyToKey--
+            KeyCode::PC_APPLICATION,
+            KeyCode::OPTION_R
+        </autogen>
+    </item>
+    <item>
+        <name>Remap Sculpt To Traditional Mac Keys(Command and Control Reverse)</name>
+        <appendix>Remaps Ctrl Left=Command,Win Left=Option, Alt Left=Control and Alt Right=Control, Application=Option, Ctrl Right=Command</appendix>
+
+        <identifier>sculpt.ctrl_to_command_swap</identifier>
+
+        <device_only>DeviceVendor::Microsoft,
+            DeviceProduct::Sculpt</device_only>
+
+        <!-- left side of keyboard -->
+        <autogen>
+            <!-- change physical Ctrl(LEFT) to Command(Left) -->
+            --KeyToKey--
+            KeyCode::CONTROL_L,
+            KeyCode::COMMAND_L
+        </autogen>
+        <autogen>
+            <!-- change phsyical Windows Key(Left) to Option(Left) -->
+            --KeyToKey--
+            KeyCode::COMMAND_L,
+            KeyCode::OPTION_L
+        </autogen>
+        <autogen>
+            <!-- change physical ALT(Left) to Command(Left) -->
+            --KeyToKey--
+            KeyCode::OPTION_L,
+            KeyCode::CONTROL_L
+        </autogen>
+
+        <!-- right side of keyboard -->
+        <autogen>
+        <!-- change phsyical ALT(RIGHT) to Command Right(LEFt) -->
+        --KeyToKey--
+        KeyCode::OPTION_R,
+        KeyCode::CONTROL_R
+        </autogen>
+        <autogen>
+            <!-- change physical Application Key(Right) to Command(Right) -->
+            --KeyToKey--
+            KeyCode::PC_APPLICATION,
+            KeyCode::OPTION_R
+        </autogen>
+        <autogen>
+            <!-- change physical Ctrl(Right) to Command(Right) -->
+            --KeyToKey--
+            KeyCode::CONTROL_R,
+            KeyCode::COMMAND_R
+        </autogen>
+
+    </item>
+</root>
