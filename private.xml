@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <root>
+    <include once="true" path="add.xml"/>
+    <include once="true" path="mac.xml"/>
+    <include once="true" path="chrome.xml"/>
+    <include once="true" path="terminal.xml"/>
 
     <devicevendordef>
         <vendorname>Microsoft</vendorname>
@@ -13,12 +17,15 @@
 
     <item>
         <name>Remap Sculpt To Traditional Mac Keys</name>
-        <appendix>Remaps Ctrl Left=Control,Win Left=Option, Alt Left=Command and Alt Right=Command, Application=Option, Ctrl Right=Control</appendix>
+        <appendix>Remaps Ctrl Left=Control,Win Left=Option, Alt Left=Command and Alt Right=Command, Application=Option,
+            Ctrl Right=Control
+        </appendix>
 
         <identifier>sculpt.remap_to_mac_traditional</identifier>
 
         <device_only>DeviceVendor::Microsoft,
-            DeviceProduct::Sculpt</device_only>
+            DeviceProduct::Sculpt
+        </device_only>
 
         <!-- left side of keyboard -->
         <autogen>
@@ -50,12 +57,15 @@
     </item>
     <item>
         <name>Remap Sculpt To Traditional Mac Keys(Command and Control Reverse)</name>
-        <appendix>Remaps Ctrl Left=Command,Win Left=Option, Alt Left=Control and Alt Right=Control, Application=Option, Ctrl Right=Command</appendix>
+        <appendix>Remaps Ctrl Left=Command,Win Left=Option, Alt Left=Control and Alt Right=Control, Application=Option,
+            Ctrl Right=Command
+        </appendix>
 
         <identifier>sculpt.ctrl_to_command_swap</identifier>
 
         <device_only>DeviceVendor::Microsoft,
-            DeviceProduct::Sculpt</device_only>
+            DeviceProduct::Sculpt
+        </device_only>
 
         <!-- left side of keyboard -->
         <autogen>
@@ -79,10 +89,10 @@
 
         <!-- right side of keyboard -->
         <autogen>
-        <!-- change phsyical ALT(RIGHT) to Command Right(LEFt) -->
-        --KeyToKey--
-        KeyCode::OPTION_R,
-        KeyCode::CONTROL_R
+            <!-- change phsyical ALT(RIGHT) to Command Right(LEFt) -->
+            --KeyToKey--
+            KeyCode::OPTION_R,
+            KeyCode::CONTROL_R
         </autogen>
         <autogen>
             <!-- change physical Application Key(Right) to Command(Right) -->
