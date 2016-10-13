@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND -->
+<root>
+    <appdef>
+        <appname>chrome</appname>
+        <equal>com.google.Chrome</equal>
+    </appdef>
+    <item>
+        <name>Chrome Custom Keys</name>
+        <only>chrome</only>
+        <identifier>private.chrome</identifier>
+        <!--
+        Next TAB
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+            KeyCode::PAGEDOWN, ModifierFlag::CONTROL_L
+        </autogen>
+        <!--
+        Previous TAB
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+            KeyCode::PAGEUP, ModifierFlag::CONTROL_L
+        </autogen>
+
+
+        <!--
+        History Prev
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+            KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+        </autogen>
+        <!--
+        History Next
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT,
+            KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND,
+        </autogen>
+    </item>
+
+</root>

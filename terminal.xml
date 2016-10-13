@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND -->
+<root>
+    <!-- definition for the terminal this should apply to -->
+    <appdef>
+        <appname>Terminal</appname>
+        <equal>com.apple.Terminal</equal>
+    </appdef>
+
+    <item>
+        <name>Terminal</name>
+        <only>Terminal</only>
+        <identifier>private.terminal</identifier>
+
+
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L,
+            KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+        </autogen>
+
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L,
+            KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+        </autogen>
+
+    </item>
+</root>

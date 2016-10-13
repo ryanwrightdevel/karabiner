@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!-- MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND -->
+<root>
+    <appdef>
+        <appname>phpstorm</appname>
+        <equal>com.jetbrains.PhpStorm</equal>
+    </appdef>
+    <item>
+        <name>PhpStorm Custom Keys</name>
+        <only>phpstorm</only>
+        <identifier>private.phpstorm</identifier>
+        <!--
+        F11 to Ctrl+Return (new file)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F11, ModifierFlag::NONE,
+            KeyCode::RETURN, ModifierFlag::CONTROL_L
+        </autogen>
+        <!--
+        F10 to Ctrl + T (Refactor This)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F10, ModifierFlag::NONE,
+            KeyCode::T, ModifierFlag::CONTROL_L
+        </autogen>
+
+        <!--
+         F9 to COMMAND + OPTION + L (format code)
+         -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F9, ModifierFlag::NONE,
+            KeyCode::L, ModifierFlag::OPTION_L | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND
+        </autogen>
+        <!--
+        F8 to Ctrl + O (Override)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F8, ModifierFlag::NONE,
+            KeyCode::O, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+        <!--
+        F7 to Ctrl + i (Inherit)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F7, ModifierFlag::NONE,
+            KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+        <!--
+        F6 to Ctrl + 1 (Directory Tree)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F6, ModifierFlag::NONE,
+            KeyCode::1, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND
+        </autogen>
+        <!--
+        F5 to Command + F12 (Class Structure Popup)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F5, ModifierFlag::NONE,
+            KeyCode::F12, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND
+        </autogen>6
+        <!--
+        F5 to Command + F12 (Class Structure Popup)
+        -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F5, ModifierFlag::NONE,
+            KeyCode::F12, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND
+        </autogen>
+
+        <!-- ==============TABS============= -->
+        <!-- previous tab -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+            KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT
+        </autogen>
+        <!-- next tab -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+            KeyCode::BRACKET_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT
+        </autogen>
+
+
+        <!-- toggle terminal -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F12, ModifierFlag::NONE,
+            KeyCode::F12, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION
+        </autogen>
+    </item>
+
+
+</root>

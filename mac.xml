@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <item>
+        <name>Mac - Scupt Keypad Remap For Mac Features</name>
+        <appendix>
+            Remap the keypad to do thing like switching between desktops
+        </appendix>
+
+        <identifier>mac.scuplt</identifier>
+
+        <device_only>DeviceVendor::Microsoft,
+            DeviceProduct::Sculpt
+        </device_only>
+
+        <!-- keypad * to Ctrl + 1 (Switch to Desktop 1) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_MULTIPLY,
+            KeyCode::1, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+
+        <!--  keypad 9 to Ctrl + 2 (Switch to Desktop 2) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_9,
+            KeyCode::2, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+
+        <!-- keypad 6 to Ctrl + 3 (Switch to Desktop 3) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_6,
+            KeyCode::3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+
+        <!-- keypad 3 to Ctrl + 4 (Switch to Desktop 4) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_3,
+            KeyCode::4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+
+        <!-- keypad . to Ctrl + 5 (Switch Desktop 5-) -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_DOT,
+            KeyCode::5, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL
+        </autogen>
+
+        <!-- Keypad - to Command + Shift + Up (LaunchPad)
+            this uses a different command than the default used by launchpad.
+            you'll need to change the launchpad shortcut to COMMAND + SHIFT + UP
+            under preferences -> keyboard -> shortcuts
+            -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_MINUS,
+            KeyCode::CURSOR_UP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_SHIFT | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND
+        </autogen>
+
+
+        <!-- FOLDERS -->
+        <!-- Keypad + to Command + Up (Go Parent Directory)
+        Note: this command is assigned to launchpad if you are using it.
+        You can assign a different command to launchpad at
+        preferences -> keyboard -> shortcuts
+        -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::KEYPAD_PLUS,
+            KeyCode::CURSOR_UP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND
+        </autogen>
+
+        <!-- fix issues with tilde/backquote showing as dansish dollor -->
+        <!-- this happens on my microsoft sculpt keyboard -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::DANISH_DOLLAR,
+            KeyCode::BACKQUOTE
+        </autogen>
+
+        <autogen>
+            --KeyToKey--
+            KeyCode::F14,
+            KeyCode::P, ModifierFlag::COMMAND_L|ModifierFlag::OPTION_L|ModifierFlag::SHIFT_L|ModifierFlag::CONTROL_L
+        </autogen>
+
+    </item>
+</root>
