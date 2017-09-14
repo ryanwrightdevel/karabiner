@@ -1,0 +1,131 @@
+{
+  "title": "Microsoft Sculpt",
+  "rules": [
+    {
+      "description": "Ctrl(Left) => Cmd(Left)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from" : {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Windows Key => Option(left)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from" : {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Alt Key(left) => Ctrl(left)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from" : {
+            "key_code": "left_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Alt (right) => Ctrl(right)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from" : {
+            "key_code": "right_option",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Application => Option(right)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from" : {
+            "key_code": "application",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Ctrl(right) => Cmd(right)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from" : {
+            "key_code": "right_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_command"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
